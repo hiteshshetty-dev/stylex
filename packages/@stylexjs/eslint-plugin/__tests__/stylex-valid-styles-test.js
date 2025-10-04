@@ -1830,7 +1830,8 @@ revert`,
             color: condition ? 'red' : 123,
             fontSize: condition ? true : '10px',
             transition: condition ? 'transform 1s' : ' ',
-            zIndex: condition ?? 'red'
+            zIndex: condition ?? 'red',
+            display: 'invalid-display' || 'block',
           }),
         });
       `,
@@ -1846,6 +1847,9 @@ revert`,
         },
         {
           message: /^zIndex value must be one of:\n/,
+        },
+        {
+          message: /^display value must be one of:\n/,
         },
       ],
     },
